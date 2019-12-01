@@ -1,4 +1,5 @@
-
+var mongoose = require("mongoose"),
+    Vacations = require("./models/vacations")
 
 var data = [
     {
@@ -11,7 +12,7 @@ var data = [
     ];
     
 function seedDB() {
-    
-};
+   console.log(data);
+}
 
 module.exports = seedDB;
