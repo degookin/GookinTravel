@@ -30,6 +30,27 @@
 
     <a href="">Home</a>
 
-    <script src="../../gookinTravel.js"></script>
+
+
+
+<!--TESTING-->
+<h4>TESTING</h4>
+
+
+ <% vacations.forEach(function(vacation){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail breakfast">
+                    <img src="<%= vacation.year %>">
+                    <div class="caption">
+                        <h4><strong><%= vacation.country %></strong></h4>
+                    </div>
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+        <% }); %>
+
+
 </body>
 </html>

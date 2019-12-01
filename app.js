@@ -2,6 +2,7 @@ var express = require("express"),
     app = express(),
     mongoose = require("mongoose"),
     bodyParser = require("body-parser"),
+    Vacation = require("./models/vacations"),
     seedDB = require("./seeds");
     
 mongoose.connect('mongodb://localhost:27017/gookinTravel', { useNewUrlParser: true }, { useUnifiedTopology: true });
@@ -40,7 +41,13 @@ app.get("/views/years/2019", function(req, res){
 //FAMILY ROUTES
 //dennis
 app.get("/views/family/dennis", function(req, res){
-    res.render("family/dennis");
+    Vacation.find({}, function(err, vacations){
+        if(err){
+            console.log(err);
+        } else {
+            res.render("family/dennis",{vacations:vacations});
+        }
+    });
 });
 //erin
 app.get("/views/family/erin", function(req, res){
@@ -54,6 +61,7 @@ app.get("/views/family/jacob", function(req, res){
 app.get("/views/family/owen", function(req, res){
     res.render("family/owen");
 });
+
 
 
 
