@@ -1,5 +1,6 @@
 var mongoose = require("mongoose");
 
+//Schema setup
 var vacationSchema = new mongoose.Schema ({
     year: Number,
     country: String,
@@ -8,4 +9,4 @@ var vacationSchema = new mongoose.Schema ({
     travelers: Array
 });
 
-module.exports = mongoose.model("Vacations", vacationSchema);
+module.exports = mongoose.model("Vacation", vacationSchema);

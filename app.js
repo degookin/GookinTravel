@@ -4,11 +4,13 @@ var express = require("express"),
     bodyParser = require("body-parser"),
     Vacation = require("./models/vacations"),
     seedDB = require("./seeds");
-    
-mongoose.connect('mongodb://localhost:27017/gookinTravel', { useNewUrlParser: true }, { useUnifiedTopology: true });
+
+//mongoose.connect('mongodb://localhost:27017/gookinTravel', { useNewUrlParser: true });
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 seedDB();
+
+
 
 //ROOT ROUTE
 app.get("/", function(req, res){
@@ -69,6 +71,6 @@ app.get("/views/family/owen", function(req, res){
 
 
 
-    app.listen(process.env.PORT, process.env.IP, function(){
+    app.listen(3000, function(){
     console.log("Travel Server Has Started...");
 });
