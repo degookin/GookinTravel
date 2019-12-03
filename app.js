@@ -6,11 +6,10 @@ var express = require("express"),
     seedDB = require("./seeds");
 
 //mongoose.connect('mongodb://localhost:27017/gookinTravel', { useNewUrlParser: true });
+//mongodb+srv://degookin:<password>@cluster0-jv74j.mongodb.net/test?retryWrites=true&w=majority
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 seedDB();
-
-
 
 //ROOT ROUTE
 app.get("/", function(req, res){
@@ -42,14 +41,17 @@ app.get("/views/years/2019", function(req, res){
 
 //FAMILY ROUTES
 //dennis
+// app.get("/views/family/dennis", function(req, res){
+//     Vacation.find({}, function(err, vacations){
+//         if(err){
+//             console.log(err);
+//         } else {
+//             res.render("family/dennis",{vacations:vacations});
+//         }
+//     });
+// });
 app.get("/views/family/dennis", function(req, res){
-    Vacation.find({}, function(err, vacations){
-        if(err){
-            console.log(err);
-        } else {
-            res.render("family/dennis",{vacations:vacations});
-        }
-    });
+    res.render("family/dennis");
 });
 //erin
 app.get("/views/family/erin", function(req, res){

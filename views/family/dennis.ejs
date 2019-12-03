@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dennis's Page</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/main.css" />
-</head>
-<body>
+<%- include("../partials/header") %>
+
+
+
     <h1>Dennis's Travel Page</h1>
 
     <h2>Countries Visited</h2>
@@ -37,20 +31,7 @@
 <h4>TESTING</h4>
 
 
- <% vacations.forEach(function(vacation){ %>
-            <div class="col-md-3 col-sm-6">
-                <div class="thumbnail breakfast">
-                    <img src="<%= vacation.year %>">
-                    <div class="caption">
-                        <h4><strong><%= vacation.country %></strong></h4>
-                    </div>
-                    <p>
-                        
-                    </p>
-                </div>
-            </div>
-        <% }); %>
 
 
-</body>
-</html>
+
+<%- include("../partials/footer") %>
