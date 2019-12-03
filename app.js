@@ -8,6 +8,7 @@ var express = require("express"),
 //mongoose.connect('mongodb://localhost:27017/gookinTravel', { useNewUrlParser: true });
 //mongodb+srv://degookin:<password>@cluster0-jv74j.mongodb.net/test?retryWrites=true&w=majority
 app.set("view engine", "ejs");
+app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended: true}));
 seedDB();
 

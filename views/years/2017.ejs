@@ -1,40 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>2015</title>
-    <link rel="stylesheet" href="/stylesheets/main.css">
-</head>
+<%- include("../partials/header") %>
 
-<body>
     <h1>2017</h1>
 
-    <h2>March</h2>
-    <h3> <a href="">Euro Trip</a></h3>
-    <h3>Munich, Zurich, Salzburg</h3>
-    <h4>Dennis, Erin, Matt & Heather</h4>
-
-    <h2>April</h2>
-    <h3> <a href="">Nashville</a> </h3>
-    <h4>Dennis & Erin</h4>
-    
-    <h2>July</h2>
-    <h3> <a href="">Chicago</a> </h3>
-    <h4>Dennis, Erin & Jacob</h4>
-    
-    <h2>October</h2>
-    <h3> <a href="">Disney</a> </h3>
-    <h4>Dennis, Erin & Jacob</h4>
-    
-    <h2>December</h2>
-    <h3> <a href="">New York City</a> </h3>
-    <h4>Dennis, Erin & Jacob</h4>
+    <div class="row text-center">
+            <div class="card col-md-3 col-sm-6" style="display:flex; flex-wrap:wrap">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Friends Euro Trip</h5>
+                    <p class="card-text">March. Munich Germany, Zurich Switzerland, Salzburg Austria with the Baers</p>
+                    <a href="/views/family/dennis">Dennis & </a>
+                    <a href="/views/family/erin">Erin</a>
+                    <a href="/views/family/euro2017" class="btn btn-primary">Trip Info</a>
+                </div>
+            </div>
+            <div class="card col-md-3 col-sm-6" style="display:flex; flex-wrap:wrap">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Nashville</h5>
+                        <p class="card-text">April. Nashville Half Marathon ugh</p>
+                        <a href="/views/family/dennis">Dennis & </a>
+                        <a href="/views/family/erin">Erin</a>
+                        <a href="/views/family/nashville2017" class="btn btn-primary">Trip Info</a>
+                    </div>
+            </div>
+            <div class="card col-md-3 col-sm-6" style="display:flex; flex-wrap:wrap">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Chicago Proposal Trip</h5>
+                        <p class="card-text">July. Cubs game, got engaged, saw Laura</p>
+                        <a href="/views/family/dennis">Dennis, </a>
+                        <a href="/views/family/erin">Erin</a>
+                        <a href="/views/family/jacob"> & Jacob</a>
+                        <a href="/views/family/chicago2017" class="btn btn-primary">Trip Info</a>
+                    </div>
+            </div>
+            <div class="card col-md-3 col-sm-6" style="display:flex; flex-wrap:wrap">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Disney</h5>
+                        <p class="card-text">October. Nagel, Feeney, Gookin trip</p>
+                        <a href="/views/family/dennis">Dennis, </a>
+                        <a href="/views/family/erin">Erin</a>
+                        <a href="/views/family/jacob"> & Jacob</a>
+                        <a href="/views/family/disney2017" class="btn btn-primary">Trip Info</a>
+                    </div>
+            </div>
+            <div class="card col-md-3 col-sm-6" style="display:flex; flex-wrap:wrap">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">New York City</h5>
+                        <p class="card-text">December. For Jason's wedding</p>
+                        <a href="/views/family/dennis">Dennis, </a>
+                        <a href="/views/family/erin">Erin</a>
+                        <a href="/views/family/jacob"> & Jacob</a>
+                        <a href="/views/family/nyc2017" class="btn btn-primary">Trip Info</a>
+                    </div>
+            </div>
+        </div>
 
     <a href="/">Home</a>
 
     <script src=""></script>
     
-</body>
-</html>
+<%- include("../partials/footer") %>

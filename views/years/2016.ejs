@@ -1,39 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>2015</title>
-    <link rel="stylesheet" href="/stylesheets/main.css">
-</head>
+<%- include("../partials/header") %>
 
-<body>
-    <h1>2016</h1>
+<h1>2016</h1>
 
-    <h2>March</h2>
-    <h3> <a href="">Paris & Brugge</a></h3>
-    <h4>Dennis & Erin</h4>
-
-    <h2>July</h2>
-    <h3> <a href="">Daytona Beach</a> </h3>
-    <h4>Dennis, Erin & Jacob</h4>
-    
-    <h2>September</h2>
-    <h3> <a href="">Cape Coral</a> </h3>
-    <h4>Dennis, Erin & Jacob</h4>
-    
-    <h2>October</h2>
-    <h3> <a href="">Chicago Marathon</a> </h3>
-    <h4>Dennis & Erin</h4>
-    
-    <h2>October</h2>
-    <h3> <a href="">Toronto</a> </h3>
-    <h4>Dennis & Erin</h4>
+<div class="row text-center">
+    <div class="card col-md-3 col-sm-6" style="display:flex; flex-wrap:wrap">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Paris & Brugge</h5>
+            <p class="card-text">March. Paris, France & Brugge, Belgium</p>
+            <a href="/views/family/dennis">Dennis & </a>
+            <a href="/views/family/erin">Erin</a>
+            <a href="/views/family/paris2016" class="btn btn-primary">Trip Info</a>
+        </div>
+    </div>
+    <div class="card col-md-3 col-sm-6" style="display:flex; flex-wrap:wrap">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Daytona Beach</h5>
+                <p class="card-text">July. Daytona Beach, FL & a day at Disney</p>
+                <a href="/views/family/dennis">Dennis, </a>
+                <a href="/views/family/erin">Erin</a>
+                <a href="/views/family/erin"> & Jacob</a>
+                <a href="/views/family/daytona2016" class="btn btn-primary">Trip Info</a>
+            </div>
+    </div>
+    <div class="card col-md-3 col-sm-6" style="display:flex; flex-wrap:wrap">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Jill's Wedding</h5>
+                <p class="card-text">September. Cape Coral, FL for Jill's wedding</p>
+                <a href="/views/family/dennis">Dennis, </a>
+                <a href="/views/family/erin">Erin</a>
+                <a href="/views/family/erin"> & Jacob</a>
+                <a href="/views/family/capecoral2016" class="btn btn-primary">Trip Info</a>
+            </div>
+    </div>
+    <div class="card col-md-3 col-sm-6" style="display:flex; flex-wrap:wrap">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Chicago Marathon</h5>
+                <p class="card-text">October. Chicago, IL for Chicago Marathon</p>
+                <a href="/views/family/dennis">Dennis & </a>
+                <a href="/views/family/erin">Erin</a>
+                <a href="/views/family/chicago2016" class="btn btn-primary">Trip Info</a>
+            </div>
+    </div>
+    <div class="card col-md-3 col-sm-6" style="display:flex; flex-wrap:wrap">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Toronto, CAN</h5>
+                <p class="card-text">October. For a work trip</p>
+                <a href="/views/family/dennis">Dennis & </a>
+                <a href="/views/family/erin">Erin</a>
+                <a href="/views/family/daytona2016" class="btn btn-primary">Trip Info</a>
+            </div>
+    </div>
+</div>
 
     <a href="/">Home</a>
 
     <script src=""></script>
     
-</body>
-</html>
+<%- include("../partials/footer") %>
