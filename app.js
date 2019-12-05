@@ -5,12 +5,14 @@ var express = require("express"),
     Vacation = require("./models/vacations"),
     seedDB = require("./seeds");
 
-//mongoose.connect('mongodb://localhost:27017/gookinTravel', { useNewUrlParser: true });
-//mongodb+srv://degookin:<password>@cluster0-jv74j.mongodb.net/test?retryWrites=true&w=majority
+
+//mongoose.connect('mongodb://localhost:27017/gookinTravel', { useNewUrlParser: true });  //, useUnifiedTopology: true
+//mongoose.connect('mongodb+srv://degookin:J%40cobe11@cluster0-jv74j.mongodb.net/gookinTravel?retryWrites=true&w=majority', { useNewUrlParser: true });
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended: true}));
 seedDB();
+
 
 //ROOT ROUTE
 app.get("/", function(req, res){
@@ -42,18 +44,17 @@ app.get("/views/years/2019", function(req, res){
 
 //FAMILY ROUTES
 //dennis
-// app.get("/views/family/dennis", function(req, res){
-//     Vacation.find({}, function(err, vacations){
-//         if(err){
-//             console.log(err);
-//         } else {
-//             res.render("family/dennis",{vacations:vacations});
-//         }
-//     });
-// });
 app.get("/views/family/dennis", function(req, res){
-    res.render("family/dennis");
+    var vacations = [
+        {name: "Cali", year: 2019},
+        {name: "Disney", year: 2020}
+    ]
+    res.render("family/dennis", {vacations:vacations});
 });
+// app.get("/views/family/dennis", function(req, res){
+//     res.render("family/dennis");
+// });
+
 //erin
 app.get("/views/family/erin", function(req, res){
     res.render("family/erin");
@@ -71,9 +72,6 @@ app.get("/views/family/owen", function(req, res){
 
 
 
-
-
-
-    app.listen(3000, function(){
-    console.log("Travel Server Has Started...");
-});
+app.listen(process.env.PORT || 3000, process.env.IP, function(){
+    console.log("TRAVEL SERVER HAS STARTED!")
+})

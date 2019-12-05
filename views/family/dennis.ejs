@@ -28,10 +28,12 @@
 
 
 <!--TESTING-->
-<h4>TESTING</h4>
-
-
-
+<% vacations.forEach(function(vacation){ %>
+    <div>
+        <h3><%= vacation.name %></h3>
+        <p><%= vacation.year %></p>
+    </div>
+<% }) %>
 
 
 <%- include("../partials/footer") %>
