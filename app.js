@@ -40,6 +40,10 @@ app.get("/views/years/2018/index", function(req, res){
 app.get("/views/years/2019/index", function(req, res){
     res.render("years/2019/index");
 });
+  //2020
+app.get("/views/years/2020/index", function(req, res){
+    res.render("years/2020/index");
+});
 
 
 //FAMILY ROUTES
@@ -67,6 +71,9 @@ app.get("/views/family/jacob", function(req, res){
 app.get("/views/family/owen", function(req, res){
     res.render("family/owen");
 });
+//parker
+app.get("/views/family/parker"), function(req, res){
+    res.render("family/parker");
 
 //CREATE - add a new vacation
 app.post("/years/2019/index", function(req, res){
